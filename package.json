@@ -1,0 +1,26 @@
+{
+  "name": "calculator_app_react",
+  "version": "1.0.0",
+  "description": "Calculator App from a Figma Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicsstar/calculator_app_react.git"
+  },
+  "keywords": [
+    "calculator",
+    "design",
+    "figma",
+    "react",
+    "javascript"
+  ],
+  "author": "Victor Igbokwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vicsstar/calculator_app_react/issues"
+  },
+  "homepage": "https://github.com/vicsstar/calculator_app_react#readme"
+}
