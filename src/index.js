@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "tailwindcss/tailwind.css"
+import { Fragment } from 'react';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Fragment />
   </React.StrictMode>,
   document.getElementById('root')
 );
