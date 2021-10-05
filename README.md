@@ -1,2 +1,3 @@
-# calculator_app_react
-A React Calculator App, with TailwindCSS for styling
+# React Calculator App
+
+A React Calculator App, with TailwindCSS for styling. Design in Figma.
