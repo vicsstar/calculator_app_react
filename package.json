@@ -12,6 +12,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "prestart": "npx tailwindcss -o src/tailwind.css",
+    "prerestart": "npx tailwindcss -o src/tailwind.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
