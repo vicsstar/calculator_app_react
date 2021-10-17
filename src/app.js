@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './components/button';
 import ButtonPanel from './components/button_panel';
 
 function App() {
