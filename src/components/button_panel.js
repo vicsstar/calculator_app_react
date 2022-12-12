@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { useRecoilState } from 'recoil';
+import actions from '../models/actions';
 import ButtonElement from '../models/button_element';
-import {leftHandDisplayValue, rightHandDisplayValue} from '../models/calculator_state';
+import useCalculator from '../models/calculator';
+import {activeNumberState, resultNumberState} from '../models/calculator_state';
 import Button from './button';
 import Display from './display';
 
-const displayTexts = ['c', '+-', '%', '/', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
+const displayTexts = Object.values(actions);
 
 function ButtonPanel() {
-    const [left, setLeft] = useRecoilState(leftHandDisplayValue);
-    const [right, setRight] = useRecoilState(rightHandDisplayValue);
-    const [algebraicLetter, setAlgebraicLetter] = useState(''); // / * - + %
+    const {activeNumber, dispatch} = useCalculator();
 
     return (
         <div className="p-5 rounded-lg w-390 bg-dark">
-            <Display value={right || left}/>
+            <Display value={activeNumber}/>
             <div className="grid grid-cols-4 grid-rows-1 gap-3 mt-2 rounded-lg">
                 {displayTexts.map((dt, idx) => {
                     const be = new ButtonElement(dt,
@@ -24,7 +24,7 @@ function ButtonPanel() {
                         <Button key={dt + idx}
                             text={be.displayText}
                             className={be.className}
-                            onClick={() => be.handleClick(left, setLeft, right, setRight, algebraicLetter, setAlgebraicLetter)}/>
+                            onClick={() => dispatch(be.displayText)}/>
                     );
                 })}
             </div>

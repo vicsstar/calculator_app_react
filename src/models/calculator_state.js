@@ -1,16 +1,16 @@
 import { atom } from "recoil";
 
-const leftHandDisplayValue = atom({
-    key: 'leftHandDisplayValue',
-    default: '0',
+const activeNumberState = atom({
+    key: 'activeNumberState',
+    default: 0,
 });
 
-const rightHandDisplayValue = atom({
-    key: 'rightHandDisplayValue',
-    default: '',
+const resultNumberState = atom({
+    key: 'resultNumberState',
+    default: null,
 });
 
 export {
-    leftHandDisplayValue,
-    rightHandDisplayValue,
+    activeNumberState,
+    resultNumberState,
 };
